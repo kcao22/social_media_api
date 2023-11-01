@@ -2,7 +2,10 @@ from typing import Optional
 from fastapi import Body, FastAPI, Response, status, HTTPException
 from pydantic import BaseModel
 from random import randrange
+from . import models
+from .database import engine, get_db
 
+import time
 import psycopg2
 
 app = FastAPI()

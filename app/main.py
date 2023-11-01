@@ -3,6 +3,8 @@ from fastapi import Body, FastAPI, Response, status, HTTPException
 from pydantic import BaseModel
 from random import randrange
 
+import psycopg2
+
 app = FastAPI()
 
 class Post(BaseModel):
